@@ -25,6 +25,8 @@ defmodule GcloudElixir.Engine do
   def start_link do
     port = Application.get_env(:gcloud_elixir, :port)
 
+IO.puts "USING Port: #{port}"
+
     port =
       case is_integer(port) do
         true -> port
